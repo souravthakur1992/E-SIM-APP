@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html {
+    @apply scroll-smooth;
+    background: #fafafa;
+  }
+}
+
+.filter-Card {
+  background: linear-gradient(360deg, #fafafa 0%, #fafafa 30%, transparent 0%, transparent 100%);
+}
+
+.sticky-header {
+  top: 0;
+  background: #4a4a4a;
+  padding: 16px 0;
+}
