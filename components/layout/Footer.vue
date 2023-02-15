@@ -174,7 +174,7 @@
         </div>
         <div class="mt-10 border-t-2 border-line pt-5">
           <div class="flex flex-col items-center justify-between text-center font-ibm text-[13px] font-semibold tracking-[1px] text-black sm:flex-row">
-            <div class="mx-auto">
+            <div class="">
               <ul class="flex flex-col items-center gap-8 sm:flex-row">
                 <li>COPYRIGHT © {{ new Date().getFullYear() }} <a href="javascript:" class="text-primary hover:text-secondary transition">AIRALO.</a></li>
                 <li>PRIVACY POLICY</li>
