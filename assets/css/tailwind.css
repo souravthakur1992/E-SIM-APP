@@ -7,6 +7,9 @@
     @apply scroll-smooth;
     background: #fafafa;
   }
+  .filter-Card .filter.active button {
+    @apply scale-105 rounded-[4px] bg-black text-white;
+  }
 }
 
 .filter-Card {
