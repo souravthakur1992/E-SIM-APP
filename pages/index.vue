@@ -74,8 +74,8 @@
     <div class="container">
       <div class="heading text-left">
         <p v-if="activeTab == 'Local'" class="mt-10 mb-5 font-ibm text-2xl font-semibold text-black">Popular Countries</p>
-        <p v-if="activeTab == 'Regional'" class="mt-10 mb-5 font-ibm text-2xl font-semibold text-black">Regional</p>
-        <p v-if="activeTab == 'Global'" class="mt-10 mb-5 font-ibm text-2xl font-semibold text-black">Global</p>
+        <p v-if="activeTab == 'Regional'" class="mt-10 mb-5 font-ibm text-2xl font-semibold text-black">Regions</p>
+        <p v-if="activeTab == 'Global'" class="mt-10 mb-5 font-ibm text-2xl font-semibold text-black">Discover Global</p>
       </div>
       <div v-if="loadingCountry">Loading ...</div>
       <div v-else class="mx-auto mb-8">
@@ -364,6 +364,7 @@
   };
   const onTabChange = (value) => {
     activeTab.value = value;
+    countryId.value = '';
   };
 
   watch(loadMore, fetchLocalTab, { immediate: true });
