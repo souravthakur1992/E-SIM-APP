@@ -9,7 +9,7 @@
     <div v-else class="mx-auto mb-8">
       <div v-if="activeTab !== 'Global' ? true : false">
         <div v-for="item in countries" :key="item?.id">
-          <div class="mt-2.5 flex flex-col rounded-md px-5 py-4 shadow-default" data-aos="fade-down" data-aos-duration="500">
+          <div class="mt-2.5 flex flex-col rounded-md px-5 py-4 shadow-default">
             <button
               type="button"
               @click="onToggle(item?.id)"
