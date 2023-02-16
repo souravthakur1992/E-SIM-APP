@@ -65,16 +65,12 @@
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/portfolio"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Identity Authentication</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/services"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Airmoney & Vouchers</NuxtLink
                 >
               </li>
@@ -84,9 +80,7 @@
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/about-us"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Refer & Earn</NuxtLink
                 >
               </li>
@@ -101,16 +95,12 @@
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/portfolio"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Help Center</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/services"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Contact Us</NuxtLink
                 >
               </li>
@@ -120,16 +110,12 @@
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/about-us"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Customer Reviews</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/about-us"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Press Kit</NuxtLink
                 >
               </li>
@@ -144,16 +130,12 @@
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/portfolio"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Travel Partners</NuxtLink
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/services"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Corporates</NuxtLink
                 >
               </li>
@@ -163,9 +145,7 @@
                 >
               </li>
               <li>
-                <NuxtLink
-                  to="/about-us"
-                  class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
+                <NuxtLink to="/" class="hover:text-secondary inline-block font-ibm text-[13px] font-normal leading-5 text-grey transition hover:scale-110"
                   >Other</NuxtLink
                 >
               </li>
