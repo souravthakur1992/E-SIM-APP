@@ -69,7 +69,7 @@
         url = `${apiEndpoint}/regions/${countryId.value}`;
     }
     if (countryId.value != '') {
-      const { pending, refresh, error, data } = await useLazyFetch(url, {
+      const { pending, refresh, error, data } = await useFetch(url, {
         server: false,
         initialCache: false,
       });
@@ -87,6 +87,7 @@
       isOpen.value = '';
       countryDetail.value = [];
     } else {
+      countryDetail.value = [];
       countryId.value = value;
       isOpen.value = value;
       fetchCountry();
@@ -94,6 +95,9 @@
   };
   const onUpdate = (value) => {
     collapseState.value = value;
+  };
+  const onLoadMore = (value) => {
+    loadMore.value = value;
   };
   const onTabChange = (value) => {
     countryId.value = '';

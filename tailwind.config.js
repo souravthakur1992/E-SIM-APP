@@ -62,4 +62,5 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/line-clamp'), rotateX, require('@tailwindcss/typography')],
+  autoprefixer: {},
 };
