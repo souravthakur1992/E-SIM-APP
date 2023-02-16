@@ -32,7 +32,7 @@
             </div>
           </div>
         </div>
-        <div class="-mb-[40px] flex justify-between">
+        <div class="-mb-[40px] flex justify-between max-sm:-mb-[16px] max-sm:justify-evenly">
           <div><p class="pl-5 font-ibm text-xs font-semibold text-white">Shot by Lorem Ipsum | İstanbul, Turkey</p></div>
           <div><p class="pr-5 font-ibm text-xs font-semibold text-white">Read more about Lorem’s Story</p></div>
         </div>
