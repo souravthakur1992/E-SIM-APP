@@ -6,11 +6,11 @@
           <h6 class="mb-6 w-[100%] max-w-[445px] font-ibm text-3xl font-semibold text-black">{{ title }}</h6>
           <ul class="flex items-center gap-2">
             <li v-for="item in images" :key="item?.id" class="flex items-center pr-2 font-ibm text-base font-medium text-black">
-              <span> <img class="h-11" :src="item?.url" alt="logo" /></span>
+              <span> <img class="h-11" :src="item?.url" alt="logo" data-aos="fade-down" data-aos-duration="1000" /></span>
             </li>
           </ul>
         </div>
-        <img :src="backgroundImage" alt="creative-agency" class="max-lg:mt-10" data-aos="'fade-right'" data-aos-duration="1000" />
+        <img :src="backgroundImage" alt="creative-agency" class="max-lg:mt-10" data-aos="fade-down" data-aos-duration="1000" />
       </div>
     </div>
   </section>

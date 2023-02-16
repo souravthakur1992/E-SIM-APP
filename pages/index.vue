@@ -101,7 +101,10 @@
   };
   const onTabChange = (value) => {
     countryId.value = '';
+    countryDetail.value = [];
+    countries.value = [];
     activeTab.value = value;
+    isOpen.value = '';
     fetchLocalTab();
   };
 

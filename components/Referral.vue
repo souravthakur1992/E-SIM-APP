@@ -1,6 +1,6 @@
 <template>
   <section class="container pt-16">
-    <div class="min-h-[450px] bg-referal bg-cover bg-no-repeat bg-blend-normal">
+    <div class="min-h-[450px] bg-referal bg-cover bg-no-repeat bg-blend-normal" data-aos="fade-down" data-aos-duration="500">
       <div class="mx-auto flex flex-col items-start justify-center pt-[10%] pl-24 max-md:items-center max-md:justify-center max-md:pt-[20%] max-md:pl-0">
         <h6 class="mb-6 w-[100%] max-w-[445px] font-ibm text-3xl font-semibold text-white">{{ title }}</h6>
         <h6 class="mb-6 w-[100%] max-w-[445px] font-ibm text-base font-normal text-white">{{ lead }}</h6>
