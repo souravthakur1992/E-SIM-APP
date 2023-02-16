@@ -84,7 +84,7 @@
             <div class="mt-2.5 flex flex-col rounded-md px-5 py-4 shadow-default">
               <button
                 type="button"
-                @click="onToggle(item?.id)"
+                @click.once="onToggle(item?.id)"
                 :aria-expanded="isOpen == item?.id"
                 class="relative !flex w-full items-center justify-between gap-2 text-lg font-bold text-black hover:border-black"
               >
@@ -114,7 +114,7 @@
               :aria-hidden="isOpen == item?.id ? 'false' : 'true'"
               class="app__collapse"
             >
-              <div v-if="loadingCountryDetail && state == `expanded`">Loading ...</div>
+              <div v-if="loadingCountryDetail" :class="state">Loading ...</div>
               <div v-else class="mx-auto">
                 <section class="mt-14">
                   <div class="container">
@@ -835,7 +835,6 @@
   const loadingCountryDetail = ref(false);
   const fetchLocalTab = async () => {
     loadingCountry.value = true;
-    countries.value = [];
     let url = '';
     switch (activeTab.value) {
       case 'Local':
@@ -848,14 +847,14 @@
         url = `${apiEndpoint}/regions`;
     }
     const { pending, refresh, error, data } = await useLazyFetch(url, {
-      server: true,
+      server: loadMore.value == 'popular' ? true : false,
+      initialCache: false,
     });
     countries.value = data?._rawValue;
     loadingCountry.value = pending?._rawValue;
   };
 
   const fetchCountry = async () => {
-    countryDetail.value = [];
     loadingCountryDetail.value = true;
     let url = '';
     switch (activeTab.value) {
@@ -870,12 +869,13 @@
     }
     if (countryId.value != '') {
       const { pending, refresh, error, data } = await useLazyFetch(url, {
-        server: true,
+        server: false,
+        initialCache: false,
       });
       countryDetail.value = data?._rawValue;
       loadingCountryDetail.value = pending?._rawValue;
     } else {
-      loadingCountryDetail.value = [];
+      countryDetail.value = [];
       loadingCountryDetail.value = false;
     }
   };
@@ -888,7 +888,7 @@
     } else {
       countryId.value = value;
       isOpen.value = value;
-      countryDetail.value = [];
+      fetchCountry();
     }
   };
   const onUpdate = (value) => {
@@ -897,16 +897,8 @@
   const onTabChange = (value) => {
     countryId.value = '';
     activeTab.value = value;
-    countryDetail.value = [];
-    countries.value = [];
+    fetchLocalTab();
   };
 
   watch(loadMore, fetchLocalTab, { immediate: true });
-  watch(countryId, fetchCountry, { immediate: true });
-  watch(activeTab, fetchLocalTab, { immediate: true });
 </script>
-<style>
-  .app__collapse {
-    transition: height 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-</style>
