@@ -836,9 +836,11 @@
       default:
         url = `${apiEndpoint}/regions`;
     }
-    const { pending, refresh, error, data } = await useLazyFetch(url);
+    const { pending, refresh, error, data } = await useLazyFetch(url, {
+      server: true,
+    });
+    countries.value = data?._value;
     loadingCountry.value = pending?._value;
-    countries.value = data?._rawValue;
   };
 
   const fetchCountry = async () => {
@@ -854,27 +856,36 @@
         url = `${apiEndpoint}/regions/${countryId.value}`;
     }
     if (countryId.value != '') {
-      const { pending, refresh, error, data } = await useLazyFetch(url);
+      const { pending, refresh, error, data } = await useLazyFetch(url, {
+        server: true,
+      });
+      countryDetail.value = data?._value;
       loadingCountryDetail.value = pending?._value;
-      countryDetail.value = data?._rawValue;
+    } else {
+      loadingCountryDetail.value = [];
     }
   };
 
   const onToggle = (value) => {
     if (isOpen.value == value) {
-      isOpen.value = '';
       countryId.value = '';
+      isOpen.value = '';
     } else {
-      isOpen.value = value;
       countryId.value = value;
+      isOpen.value = value;
     }
   };
   const onTabChange = (value) => {
-    activeTab.value = value;
     countryId.value = '';
+    activeTab.value = value;
   };
 
   watch(loadMore, fetchLocalTab, { immediate: true });
   watch(countryId, fetchCountry, { immediate: true });
   watch(activeTab, fetchLocalTab, { immediate: true });
 </script>
+<style>
+  .app__collapse {
+    transition: height 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+</style>
