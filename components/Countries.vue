@@ -48,7 +48,7 @@
             <section class="mt-14">
               <div class="container">
                 <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                  <div v-for="network in countryDetail?.packages" :key="network?.id" data-aos="fade-down" data-aos-duration="1000">
+                  <div v-for="network in countryDetail?.packages" :key="network?.id" data-aos="fade-down" data-aos-duration="600">
                     <div
                       class="mb-8 rounded-lg shadow-default"
                       :style="{ background: `linear-gradient(${90}deg, ${network?.operator?.gradient_start}, ${network?.operator?.gradient_end})` }"
@@ -142,7 +142,7 @@
           <section class="mt-14">
             <div class="container">
               <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                <div v-for="network in countries?.packages" :key="network?.id" data-aos="fade-down" data-aos-duration="1000">
+                <div v-for="network in countries?.packages" :key="network?.id" data-aos="fade-down" data-aos-duration="600">
                   <div
                     class="mb-8 rounded-lg shadow-default"
                     :style="{ background: `linear-gradient(${90}deg, ${network?.operator?.gradient_start}, ${network?.operator?.gradient_end})` }"
