@@ -311,10 +311,48 @@
         </button>
       </div>
     </div>
+    <section class="pt-16">
+      <div class="container px-8">
+        <div class="flex flex-wrap items-center justify-between max-lg:justify-center">
+          <div>
+            <h6 class="mb-6 w-[100%] max-w-[445px] font-ibm text-3xl font-semibold text-black">
+              Download Airalo app to manage and top up your eSIMs anytime, anywhere.
+            </h6>
+            <ul class="flex items-center gap-2">
+              <li class="flex items-center pr-2 font-ibm text-base font-medium text-black">
+                <span> <img class="h-11" src="../public/assets/home/google-store.png" alt="logo" /> </span>
+              </li>
+              <li class="title flex items-center py-4 px-6 pr-2 font-ibm text-base font-medium text-black">
+                <span> <img class="h-11" src="../public/assets/home/google-store.png" alt="logo" /> </span>
+              </li>
+            </ul>
+          </div>
+          <img src="../public/assets/home/marketing-Image.png" alt="creative-agency" class="max-lg:mt-10" data-aos="'fade-right'" data-aos-duration="1000" />
+        </div>
+      </div>
+    </section>
+    <section class="container pt-16">
+      <div class="min-h-[450px] bg-referal bg-cover bg-no-repeat bg-blend-normal">
+        <div class="mx-auto flex flex-col items-start justify-center pt-[10%] pl-24 max-md:items-center max-md:justify-center max-md:pt-[20%] max-md:pl-0">
+          <h6 class="mb-6 w-[100%] max-w-[445px] font-ibm text-3xl font-semibold text-white">Get free eSIMs</h6>
+          <h6 class="mb-6 w-[100%] max-w-[445px] font-ibm text-base font-normal text-white">
+            You can earn $3 Airmoney credits by sharing your referral code with friends.
+          </h6>
+          <div class="flex items-center justify-around pb-10">
+            <button
+              type="button"
+              class="h-11 w-full max-w-[310px] rounded-md border-[1px] bg-opacity-0 px-8 text-[11px] text-white hover:border-black hover:bg-black"
+            >
+              FIND OUT HOW
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="overflow-hidden py-16">
       <div class="container">
         <div class="heading text-center">
-          <h6 class="mb-0 font-ibm text-2xl font-semibold text-black">Customer Reviews</h6>
+          <h6 class="mb-10 font-ibm text-2xl font-semibold text-black">Customer Reviews</h6>
         </div>
       </div>
 

@@ -54,6 +54,7 @@ module.exports = {
       }),
       backgroundImage: {
         hero: "url('/assets/home/header-image.svg')",
+        referal: "url('/assets/home/referral-image.png')",
       },
       boxShadow: {
         default: '0px 10px 30px rgba(0, 0, 0, 0.15)',
