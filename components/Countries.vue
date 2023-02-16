@@ -34,15 +34,6 @@
               </div>
             </button>
           </div>
-          <!-- <HeightCollapsible
-            tag="section"
-            @update="onUpdate"
-            v-slot="{ state }"
-            :isOpen="isOpen == item?.id"
-            :aria-hidden="isOpen == item?.id ? 'false' : 'true'"
-            class="app__collapse"
-            :style="`${isOpen == item?.id ? { height: `auto !important`, overFlowY: `auto !important` } : { height: `inherit`, overFlowY: `inherit` }}`"
-          > -->
           <div v-if="loadingCountryDetail" :class="state">Loading ...</div>
           <div v-if="isOpen == item?.id" class="mx-auto">
             <section class="mt-14">
@@ -134,7 +125,6 @@
               </div>
             </section>
           </div>
-          <!-- </HeightCollapsible> -->
         </div>
       </div>
       <div v-else class="mx-auto mb-8">
