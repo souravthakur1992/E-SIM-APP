@@ -85,6 +85,7 @@
               <button
                 type="button"
                 @click="onToggle(item?.id)"
+                :aria-expanded="isOpen == item?.id"
                 class="relative !flex w-full items-center justify-between gap-2 text-lg font-bold text-black hover:border-black"
               >
                 <ul class="flex items-center gap-5">
@@ -105,8 +106,15 @@
                 </div>
               </button>
             </div>
-            <HeightCollapsible tag="section" :isOpen="isOpen == item?.id" :aria-hidden="isOpen == item?.id ? 'false' : 'true'" class="app__collapse">
-              <div v-if="loadingCountryDetail">Loading ...</div>
+            <HeightCollapsible
+              tag="section"
+              @update="onUpdate"
+              v-slot="{ state }"
+              :isOpen="isOpen == item?.id"
+              :aria-hidden="isOpen == item?.id ? 'false' : 'true'"
+              class="app__collapse"
+            >
+              <div v-if="loadingCountryDetail && state == `expanded`">Loading ...</div>
               <div v-else class="mx-auto">
                 <section class="mt-14">
                   <div class="container">
@@ -819,12 +827,15 @@
   const loadMore = ref('popular');
   const activeTab = ref('Local');
   const countries = ref([]);
+  const collapseState = ref('');
   const isOpen = ref('');
   const loadingCountry = ref(false);
   const countryDetail = ref([]);
   const countryId = ref('');
   const loadingCountryDetail = ref(false);
   const fetchLocalTab = async () => {
+    loadingCountry.value = true;
+    countries.value = [];
     let url = '';
     switch (activeTab.value) {
       case 'Local':
@@ -839,11 +850,13 @@
     const { pending, refresh, error, data } = await useLazyFetch(url, {
       server: true,
     });
-    countries.value = data?._value;
-    loadingCountry.value = pending?._value;
+    countries.value = data?._rawValue;
+    loadingCountry.value = pending?._rawValue;
   };
 
   const fetchCountry = async () => {
+    countryDetail.value = [];
+    loadingCountryDetail.value = true;
     let url = '';
     switch (activeTab.value) {
       case 'Local':
@@ -859,10 +872,11 @@
       const { pending, refresh, error, data } = await useLazyFetch(url, {
         server: true,
       });
-      countryDetail.value = data?._value;
-      loadingCountryDetail.value = pending?._value;
+      countryDetail.value = data?._rawValue;
+      loadingCountryDetail.value = pending?._rawValue;
     } else {
       loadingCountryDetail.value = [];
+      loadingCountryDetail.value = false;
     }
   };
 
@@ -870,14 +884,21 @@
     if (isOpen.value == value) {
       countryId.value = '';
       isOpen.value = '';
+      countryDetail.value = [];
     } else {
       countryId.value = value;
       isOpen.value = value;
+      countryDetail.value = [];
     }
+  };
+  const onUpdate = (value) => {
+    collapseState.value = value;
   };
   const onTabChange = (value) => {
     countryId.value = '';
     activeTab.value = value;
+    countryDetail.value = [];
+    countries.value = [];
   };
 
   watch(loadMore, fetchLocalTab, { immediate: true });

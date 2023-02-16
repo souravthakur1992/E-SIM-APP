@@ -94,6 +94,7 @@
   const store = useAppStore();
 
   const showTopButton = ref(false);
+
   onMounted(() => {
     // set default settings and animation initalization
     AOS.init({
