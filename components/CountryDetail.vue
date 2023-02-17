@@ -12,9 +12,31 @@
                 <p class="font-ibm text-xl font-semibold" :class="`${network?.operator?.style != 'light' ? 'text-black' : 'text-white'}`">
                   {{ network?.operator?.title }}
                 </p>
-                <p class="font-md font-ibm text-[13px]" :class="`${network?.operator?.style != 'light' ? 'text-black' : 'text-white'}`">
+                <p
+                  v-if="network?.operator?.countries?.length == 1"
+                  class="font-md font-ibm text-[13px]"
+                  :class="`${network?.operator?.style != 'light' ? 'text-black' : 'text-white'}`"
+                >
                   {{ network?.operator?.countries?.[0]?.title }}
                 </p>
+                <ul v-else class="font-md flex items-center gap-5">
+                  <li
+                    class="pr-2font-ibm flex items-center text-[13px] font-medium"
+                    :class="`${network?.operator?.style != 'light' ? 'text-black' : 'text-white'}`"
+                  >
+                    {{ network?.operator?.countries?.length }} Countries
+                    <span class="pl-2">
+                      <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.9971 12.5C9.28565 12.5 12 9.78433 12 6.5C12 3.21567 9.27985 0.5 5.9913 0.5C2.70855 0.5 0 3.21567 0 6.5C0 9.78433 2.71435 12.5 5.9971 12.5ZM6.49009 9.09961C6.2059 9.09961 6.0029 8.88491 6.0029 8.59478C6.0029 8.44971 6.0609 8.31625 6.1595 8.2234L6.89029 7.52708L7.56307 6.98743L6.32769 7.04545H3.39874C3.08555 7.04545 2.86515 6.81335 2.86515 6.5C2.86515 6.18085 3.09135 5.94874 3.39874 5.94874H6.32769L7.56307 6.00677L6.88449 5.46712L6.1595 4.77079C6.0667 4.67795 6.0029 4.54449 6.0029 4.39942C6.0029 4.10928 6.2059 3.90039 6.49009 3.90039C6.64089 3.90039 6.75689 3.94101 6.86129 4.04545L8.90865 6.0648C9.05365 6.19826 9.11165 6.33172 9.11165 6.4942C9.11165 6.66828 9.04785 6.80174 8.90865 6.9352L6.86129 8.94874C6.75689 9.04739 6.64089 9.09961 6.49009 9.09961Z"
+                          :fill="`${network?.operator?.style == 'light' ? '#FFFFFF' : '#4A4A4A'}`"
+                        />
+                      </svg>
+                    </span>
+                  </li>
+                </ul>
               </div>
               <div><img class="-mt-[40%] w-36" :src="network?.operator?.image?.url" /></div>
             </div>

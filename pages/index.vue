@@ -52,7 +52,7 @@
         url = `${apiEndpoint}/countries?type=${loadMore.value}`;
         break;
       case 'Global':
-        url = `${apiEndpoint}/regions/5`;
+        url = `${apiEndpoint}/regions/world`;
         break;
       default:
         url = `${apiEndpoint}/regions`;
@@ -77,7 +77,7 @@
         url = `${apiEndpoint}/countries/${countryId.value}`;
         break;
       case 'Global':
-        url = `${apiEndpoint}/regions/5`;
+        url = `${apiEndpoint}/regions/world`;
         break;
       default:
         url = `${apiEndpoint}/regions/${countryId.value}`;
