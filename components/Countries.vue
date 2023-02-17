@@ -11,12 +11,15 @@
     <div v-else class="mx-auto mb-8">
       <div v-if="activeTab !== 'Global' ? true : false">
         <div v-for="item in countries" :key="item?.id">
-          <div class="mt-2.5 flex flex-col rounded-md px-5 py-4 shadow-default">
+          <div
+            @click="onToggle(item?.id)"
+            class="hover:border-1px mt-2.5 flex cursor-pointer flex-col rounded-md border-black px-5 py-4 shadow-default hover:border-black"
+            :class="isOpen == item?.id ? 'selected' : ''"
+          >
             <button
               type="button"
-              @click="onToggle(item?.id)"
               :aria-expanded="isOpen == item?.id"
-              class="relative !flex w-full items-center justify-between gap-2 text-lg font-bold text-black hover:border-black"
+              class="relative !flex w-full items-center justify-between gap-2 text-lg font-bold text-black"
             >
               <ul class="flex items-center gap-5">
                 <li class="flex items-center pr-2 font-ibm text-base font-medium text-black">
