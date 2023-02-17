@@ -19,9 +19,9 @@
                 >
                   {{ network?.operator?.countries?.[0]?.title }}
                 </p>
-                <ul v-else class="font-md flex items-center gap-5">
+                <ul v-else class="font-md flex items-center">
                   <li
-                    class="pr-2font-ibm flex items-center text-[13px] font-medium"
+                    class="flex items-center font-ibm text-[13px] font-medium"
                     :class="`${network?.operator?.style != 'light' ? 'text-black' : 'text-white'}`"
                   >
                     {{ network?.operator?.countries?.length }} Countries
