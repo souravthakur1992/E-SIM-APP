@@ -27,7 +27,12 @@
                 <p class="font-ibm text-base font-medium text-white">Is your device eSIM compatible?</p>
               </div>
               <div class="border-black pt-5 font-ibm text-xs font-bold text-white">
-                <button type="button" class="w-full max-w-[40%] rounded-md border-2 border-white p-2">SHOW SUPPORTED DEVICES</button>
+                <button
+                  type="button"
+                  class="h-10 w-full max-w-[44%] rounded-md border-[1px] border-x-white p-2 text-xs font-bold text-white hover:border-black hover:bg-black hover:text-white"
+                >
+                  SHOW SUPPORTED DEVICES
+                </button>
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@
       </div>
     </div>
 
-    <div class="container relative px-16">
+    <div class="container relative cursor-pointer px-16">
       <div
         class="team-swiper-button-prev border-primary absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 rotate-90 items-center justify-center bg-white text-black shadow-default duration-200 hover:bg-black hover:text-white"
       >
@@ -20,7 +20,7 @@
         </svg>
       </div>
       <div
-        class="team-swiper-button-next border-primary text-primary hover:bg-primary absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 -rotate-90 items-center justify-center bg-white text-black shadow-default duration-200 hover:bg-black hover:text-white"
+        class="team-swiper-button-next border-primary text-primary hover:bg-primary absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 -rotate-90 cursor-pointer items-center justify-center bg-white text-black shadow-default duration-200 hover:bg-black hover:text-white"
       >
         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

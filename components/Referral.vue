@@ -17,6 +17,7 @@
   </section>
 </template>
 <script setup lang="ts">
+  // Page Props
   defineProps({
     title: {
       type: String,
